@@ -1,2 +1,16 @@
 # AsyncChannel
 使用AsyncChannel向Activity或者framgment传递数据。相比增加static方法来说更优雅，而且Activity/fragment的生命击期由framework控制，强行用static可能引起各种异常。
+
+一直以来，Android开发者遇到一个很大痛点就是向Activity或者Fragment传递数据很不方便，不方便的原因主要有如下几点：
+一，Activity/fragment的生命击期由framework控制.如果要实时与Activity/Fragment传递数据比较困难。
+二，使用static 方法不优雅
+三，基于intent/bundle传递一般是单向的，相互交换数据比较困难。
+等等，这里就不多列举了。
+
+之前笔者给出一种借用binder的方法解决此问题，
+这里给出另外一种方法，基于AsyncChannel来解决此问题。
+简单解释一下AsyncChannel：
+AsyncChannel是Android framework里的一个文件，主要用于wifi/data service等通信模块，并未开放给开发者使用。
+主要用于两个handle之前的数据交换，不仅可以跨线程，也可以跨进程。
+
+该仓库代码目前只是一个简单demo。等笔者有时间再来整理。
