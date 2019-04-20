@@ -1,0 +1,2 @@
+# AsyncChannel
+使用AsyncChannel向Activity或者framgment传递数据。相比增加static方法来说更优雅，而且Activity/fragment的生命击期由framework控制，强行用static可能引起各种异常。
